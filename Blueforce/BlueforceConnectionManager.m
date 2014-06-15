@@ -35,6 +35,10 @@ static BlueforceConnectionManager* sharedConnection = nil;
 }
 
 -(void)centralManagerDidUpdateState:(CBCentralManager *)central {
+    if (!self.delegate) {
+        return;
+    }
+    
     if ([central state] == CBCentralManagerStatePoweredOn) {
         [self.delegate isBluetoothEnabled:YES];
     } else {
@@ -42,7 +46,7 @@ static BlueforceConnectionManager* sharedConnection = nil;
     }
 }
 
-- (void) centralManager:(CBCentralManager *)central didDiscoverPeripheral:(CBPeripheral *)peripheral advertisementData:(NSDictionary *)advertisementData RSSI:(NSNumber *)RSSI
+- (void)centralManager:(CBCentralManager *)central didDiscoverPeripheral:(CBPeripheral *)peripheral advertisementData:(NSDictionary *)advertisementData RSSI:(NSNumber *)RSSI
 {
     NSArray *serviceData = [advertisementData objectForKey:@"kCBAdvDataServiceUUIDs"];
     if (!serviceData || (![serviceData containsObject: [CBUUID UUIDWithString: kBlueforceUUID]])) {
@@ -57,9 +61,9 @@ static BlueforceConnectionManager* sharedConnection = nil;
     }
 }
 
-- (void) centralManager:(CBCentralManager *)central didConnectPeripheral:(CBPeripheral *)peripheral {
+- (void)centralManager:(CBCentralManager *)central didConnectPeripheral:(CBPeripheral *)peripheral {
     BlueforceConnection *connection = [BlueforceConnection connectionWithId:peripheral.name];
-    [connection connected];
+    [connection blueforceConnectionManagerConnected];
     if (self.delegate) {
         [self.delegate didDiscoverConnection:connection];
     }

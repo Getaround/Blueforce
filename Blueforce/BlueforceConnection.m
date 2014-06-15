@@ -41,11 +41,13 @@ static NSMutableDictionary *connections = nil;
     return self;
 }
 
--(void)connected {
+-(void) blueforceConnectionManagerConnected {
+    // scan for all available services on the peripheral
     [self.peripheral discoverServices:nil];
 }
 
 - (void)peripheral:(CBPeripheral *)peripheral didDiscoverServices:(NSError *)error {
+    // only one service is likely published on the peripheral
     [peripheral discoverCharacteristics:nil forService: [peripheral.services objectAtIndex:0]];
 }
 

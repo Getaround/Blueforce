@@ -18,7 +18,6 @@
 @interface BlueforceConnectionManager : NSObject <CBCentralManagerDelegate>
 
 @property CBCentralManager *cm;
-@property BOOL acceptNewFobs;
 @property id<BlueforceConnectionManagerDelegate> delegate;
 
 +(BlueforceConnectionManager *)sharedConnectionManager;

@@ -19,10 +19,12 @@
 
 -(BlueforceConnection *)initWithPeripheral:(CBPeripheral *)peripheral;
 
--(void) connected;
-
-
 -(BOOL) canLockUnlock;
 -(void) lock;
 -(void) unlock;
+
+
+// called by BlueforceConnectionManager to notify the connection that it is now active.
+-(void) blueforceConnectionManagerConnected;
+
 @end
