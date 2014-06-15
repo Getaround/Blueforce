@@ -7,17 +7,26 @@
 //
 
 #import <XCTest/XCTest.h>
+#import "BlueforceConnectionManager.h"
 
-@interface BlueforceTests : XCTestCase
-
+@interface BlueforceTests : XCTestCase <BlueforceConnectionManagerDelegate>
+@property BlueforceConnectionManager *connManager;
 @end
 
 @implementation BlueforceTests
 
+-(void)isBluetoothEnabled:(bool)enabled {
+    // pass
+}
+
+-(void)didDiscoverConnection:(BlueforceConnection *)fob {
+    // pass
+}
+
 - (void)setUp
 {
     [super setUp];
-    // Put setup code here. This method is called before the invocation of each test method in the class.
+    self.connManager = [[BlueforceConnectionManager alloc] initWithDelegate: self];
 }
 
 - (void)tearDown
@@ -26,9 +35,9 @@
     [super tearDown];
 }
 
-- (void)testExample
+- (void)testConnection
 {
-    XCTFail(@"No implementation for \"%s\"", __PRETTY_FUNCTION__);
+    [self.connManager startScan];
 }
 
 @end

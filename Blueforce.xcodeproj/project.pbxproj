@@ -7,15 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		17136635194CD020000818AF /* BlueforceConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 17136634194CD020000818AF /* BlueforceConstants.m */; };
 		17D02138194B811800EF5788 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 17D02137194B811800EF5788 /* Foundation.framework */; };
-		17D0213D194B811800EF5788 /* Blueforce.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 17D0213C194B811800EF5788 /* Blueforce.h */; };
-		17D0213F194B811800EF5788 /* Blueforce.m in Sources */ = {isa = PBXBuildFile; fileRef = 17D0213E194B811800EF5788 /* Blueforce.m */; };
+		17D0213D194B811800EF5788 /* BlueforceConnectionManager.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 17D0213C194B811800EF5788 /* BlueforceConnectionManager.h */; };
+		17D0213F194B811800EF5788 /* BlueforceConnectionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 17D0213E194B811800EF5788 /* BlueforceConnectionManager.m */; };
 		17D02146194B811800EF5788 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 17D02145194B811800EF5788 /* XCTest.framework */; };
 		17D02147194B811800EF5788 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 17D02137194B811800EF5788 /* Foundation.framework */; };
 		17D02149194B811800EF5788 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 17D02148194B811800EF5788 /* UIKit.framework */; };
 		17D0214C194B811800EF5788 /* libBlueforce.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 17D02134194B811800EF5788 /* libBlueforce.a */; };
 		17D02152194B811800EF5788 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 17D02150194B811800EF5788 /* InfoPlist.strings */; };
 		17D02154194B811800EF5788 /* BlueforceTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 17D02153194B811800EF5788 /* BlueforceTests.m */; };
+		17D0215F194B8FAD00EF5788 /* BlueforceConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = 17D0215E194B8FAD00EF5788 /* BlueforceConnection.m */; };
+		17D021B0194C304100EF5788 /* BlueforceConnection.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 17D0215D194B8FAD00EF5788 /* BlueforceConnection.h */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,24 +38,29 @@
 			dstPath = "include/$(PRODUCT_NAME)";
 			dstSubfolderSpec = 16;
 			files = (
-				17D0213D194B811800EF5788 /* Blueforce.h in CopyFiles */,
+				17D021B0194C304100EF5788 /* BlueforceConnection.h in CopyFiles */,
+				17D0213D194B811800EF5788 /* BlueforceConnectionManager.h in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		17136633194CD020000818AF /* BlueforceConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BlueforceConstants.h; sourceTree = "<group>"; };
+		17136634194CD020000818AF /* BlueforceConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BlueforceConstants.m; sourceTree = "<group>"; };
 		17D02134194B811800EF5788 /* libBlueforce.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libBlueforce.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		17D02137194B811800EF5788 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		17D0213B194B811800EF5788 /* Blueforce-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Blueforce-Prefix.pch"; sourceTree = "<group>"; };
-		17D0213C194B811800EF5788 /* Blueforce.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Blueforce.h; sourceTree = "<group>"; };
-		17D0213E194B811800EF5788 /* Blueforce.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Blueforce.m; sourceTree = "<group>"; };
+		17D0213C194B811800EF5788 /* BlueforceConnectionManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BlueforceConnectionManager.h; sourceTree = "<group>"; };
+		17D0213E194B811800EF5788 /* BlueforceConnectionManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BlueforceConnectionManager.m; sourceTree = "<group>"; };
 		17D02144194B811800EF5788 /* BlueforceTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BlueforceTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		17D02145194B811800EF5788 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		17D02148194B811800EF5788 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
 		17D0214F194B811800EF5788 /* BlueforceTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "BlueforceTests-Info.plist"; sourceTree = "<group>"; };
 		17D02151194B811800EF5788 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		17D02153194B811800EF5788 /* BlueforceTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BlueforceTests.m; sourceTree = "<group>"; };
+		17D0215D194B8FAD00EF5788 /* BlueforceConnection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BlueforceConnection.h; sourceTree = "<group>"; };
+		17D0215E194B8FAD00EF5788 /* BlueforceConnection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BlueforceConnection.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +86,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		17136636194CD032000818AF /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				17136633194CD020000818AF /* BlueforceConstants.h */,
+				17136634194CD020000818AF /* BlueforceConstants.m */,
+			);
+			name = Constants;
+			sourceTree = "<group>";
+		};
 		17D0212B194B811800EF5788 = {
 			isa = PBXGroup;
 			children = (
@@ -110,8 +127,10 @@
 		17D02139194B811800EF5788 /* Blueforce */ = {
 			isa = PBXGroup;
 			children = (
-				17D0213C194B811800EF5788 /* Blueforce.h */,
-				17D0213E194B811800EF5788 /* Blueforce.m */,
+				17136636194CD032000818AF /* Constants */,
+				17D021AF194C260B00EF5788 /* Headers */,
+				17D0215E194B8FAD00EF5788 /* BlueforceConnection.m */,
+				17D0213E194B811800EF5788 /* BlueforceConnectionManager.m */,
 				17D0213A194B811800EF5788 /* Supporting Files */,
 			);
 			path = Blueforce;
@@ -141,6 +160,15 @@
 				17D02150194B811800EF5788 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		17D021AF194C260B00EF5788 /* Headers */ = {
+			isa = PBXGroup;
+			children = (
+				17D0213C194B811800EF5788 /* BlueforceConnectionManager.h */,
+				17D0215D194B8FAD00EF5788 /* BlueforceConnection.h */,
+			);
+			name = Headers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -224,7 +252,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				17D0213F194B811800EF5788 /* Blueforce.m in Sources */,
+				17D0213F194B811800EF5788 /* BlueforceConnectionManager.m in Sources */,
+				17D0215F194B8FAD00EF5788 /* BlueforceConnection.m in Sources */,
+				17136635194CD020000818AF /* BlueforceConstants.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -405,6 +435,7 @@
 				17D02159194B811800EF5788 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		17D0215A194B811800EF5788 /* Build configuration list for PBXNativeTarget "BlueforceTests" */ = {
 			isa = XCConfigurationList;
@@ -413,6 +444,7 @@
 				17D0215C194B811800EF5788 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
